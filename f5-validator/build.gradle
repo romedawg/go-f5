@@ -1,0 +1,13 @@
+def version = "0.1.0"
+
+rpmAssemble {
+    applicationSummary = "validate irule ordering for terraform config files against the f5"
+    applicationDescription = """a user will run this tool with username to the f5, along with the host and directory
+of the terraform vip config files to validate during runtime.  The slice returned are vips whos irules will need to be 
+updated."""
+    applicationVersion = "${version}"
+}
+
+rpmPublish {
+    applicationVersion = "${version}"
+}
